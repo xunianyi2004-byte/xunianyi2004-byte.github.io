@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explore LANGSHENG flameless candles, outdoor candles, taper candles, tealights, lanterns, decorative lighting and seasonal products." />
+    <title>Products | LANGSHENG</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#catalog">Skip to products</a>
+
+    <header class="site-header" aria-label="Main navigation">
+      <div class="header-inner">
+        <a class="brand" href="../" aria-label="LANGSHENG home">
+          <img src="../langsheng-logo.webp" alt="LANGSHENG Artware Ningbo" width="260" height="87" />
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+          <span></span><span></span><span></span><span class="sr-only">Open navigation</span>
+        </button>
+        <nav class="main-nav" id="main-menu">
+          <a href="../">Home</a>
+          <a href="../about/">About Us</a>
+          <a class="active" href="./">Product</a>
+          <a href="https://chinalangsheng.com/category/blog/">Blog</a>
+          <a class="contact-button" href="https://chinalangsheng.com/contact/">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="catalog">
+      <section class="catalog-shell" aria-labelledby="page-title">
+        <header class="catalog-heading">
+          <p class="eyebrow">LANGSHENG COLLECTIONS</p>
+          <h1 id="page-title">Our Products</h1>
+          <p>Explore flameless candles and decorative lighting designed for retail, hospitality, events and seasonal collections.</p>
+        </header>
+
+        <div class="catalog-controls">
+          <label class="search-field" for="product-search">
+            <span class="sr-only">Search products</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="m21 21-4.35-4.35m2.35-5.15A7.5 7.5 0 1 1 4 11.5a7.5 7.5 0 0 1 15 0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg>
+            <input id="product-search" type="search" autocomplete="off" placeholder="Search products" />
+          </label>
+          <label class="sort-field" for="product-sort">
+            <span class="sr-only">Sort products</span>
+            <select id="product-sort">
+              <option value="featured">Default sorting</option>
+              <option value="az">Name: A to Z</option>
+              <option value="za">Name: Z to A</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="category-row" aria-label="Product categories">
+          <button class="category-button is-active" type="button" data-category="all">All Products</button>
+          <div class="category-dropdown">
+            <button class="category-button parent-filter" type="button" data-category="Flameless Candles">Flameless Candles</button>
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="flameless-subcategories" aria-label="Show Flameless Candles subcategories">
+              <svg aria-hidden="true" viewBox="0 0 12 8" width="12" height="8"><path d="m1 1.25 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+            </button>
+            <div class="subcategory-menu" id="flameless-subcategories" role="menu">
+              <button type="button" data-subcategory="Pillar Candles" role="menuitem">Pillar Candles</button>
+              <button type="button" data-subcategory="String light Candles" role="menuitem">String light Candles</button>
+              <button type="button" data-subcategory="Cement Candles" role="menuitem">Cement Candles</button>
+              <button type="button" data-subcategory="Plastic Candles" role="menuitem">Plastic Candles</button>
+              <button type="button" data-subcategory="Glass Candles" role="menuitem">Glass Candles</button>
+              <button type="button" data-subcategory="Rechargeable Candles" role="menuitem">Rechargeable Candles</button>
+              <button type="button" data-subcategory="Seasonal Candles" role="menuitem">Seasonal Candles</button>
+              <button type="button" data-subcategory="Carved Candles" role="menuitem">Carved Candles</button>
+            </div>
+          </div>
+          <button class="category-button" type="button" data-category="Out Door Candles">Out Door Candles</button>
+          <button class="category-button" type="button" data-category="Taper Candles">Taper Candles</button>
+          <button class="category-button" type="button" data-category="Tealights">Tealights</button>
+          <button class="category-button" type="button" data-category="Lanterns">Lanterns</button>
+          <button class="category-button" type="button" data-category="Decorative Lighting">Decorative Lighting</button>
+          <button class="category-button" type="button" data-category="Seasonal Products">Seasonal Products</button>
+        </div>
+
+        <div class="results-meta">
+          <p id="results-count" aria-live="polite"></p>
+          <button class="clear-filters" id="clear-filters" type="button" hidden>Clear filters</button>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <h2>No products found</h2>
+          <p>Try a different keyword or product category.</p>
+        </div>
+        <nav class="pagination" id="pagination" aria-label="Product pages"></nav>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p class="footer-logo">LANGSHENG</p>
+          <p>Flameless candle manufacturing, product development and OEM/ODM support since 2002.</p>
+        </div>
+        <div>
+          <h2>Contact Info</h2>
+          <address>
+            <a href="tel:+8657482836996">0086-574-8283 6996</a><br />
+            <a href="tel:+8613386661588">0086-133 8666 1588</a><br />
+            No.3 Langsheng Road, Meiliangqiao Industrial Zone,<br />Haishu District, Ningbo, China
+          </address>
+        </div>
+        <div class="footer-links">
+          <h2>Quick Links</h2>
+          <a href="../">Home</a>
+          <a href="../about/">About Us</a>
+          <a href="./">Products</a>
+          <a href="https://chinalangsheng.com/contact/">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">Copyright © <span id="year">2026</span> LANGSHENG</div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
