@@ -25,7 +25,7 @@ const PRODUCTS = [
   { title:"Christmas LED Candle and Light Collection", category:"Seasonal Products", image:"../seasonal-candles.webp", url:"https://chinalangsheng.com/product-category/flameless-candle/christmas-series/" }
 ];
 
-const PAGE_SIZE = 8;
+const PAGE_SIZE = 16;
 const state = { category:"all", subcategory:"all", query:"", sort:"featured", page:1 };
 const grid = document.querySelector("#product-grid");
 const count = document.querySelector("#results-count");
