@@ -174,10 +174,11 @@ button { font: inherit; }
 .why-title {
   margin: 0;
   text-align: center;
+  font-family: var(--serif);
   font-size: clamp(44px, 5vw, 78px);
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.05;
-  letter-spacing: 0.045em;
+  letter-spacing: 0;
 }
 
 .product-collage {
@@ -311,23 +312,108 @@ button { font: inherit; }
 .category-card:focus-visible::after { background: rgba(0, 0, 0, 0.19); }
 .category-card:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 
-.site-footer { color: #f4eee7; background: #211914; }
+.site-footer {
+  color: #666;
+  background: #f3f3f3;
+  font-family: "Montserrat", Arial, sans-serif;
+}
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.15fr 1.3fr 0.65fr;
-  gap: clamp(40px, 6vw, 110px);
-  padding-top: 72px;
-  padding-bottom: 64px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 60%;
+  max-width: none;
+  gap: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.footer-logo { margin: 0 0 14px; font-family: var(--serif); font-size: 31px; letter-spacing: 0.08em; }
-.footer-brand p:last-child { max-width: 440px; color: #cfc3b9; }
-.site-footer h2 { margin: 0 0 18px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; }
-.site-footer address { color: #cfc3b9; font-style: normal; }
-.site-footer a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
-.footer-links { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; }
-.footer-bottom { padding: 22px var(--page-pad); border-top: 1px solid rgba(255,255,255,.12); color: #aa9f96; text-align: center; font-size: 13px; }
+.footer-column {
+  min-width: 0;
+  padding-inline: 10px;
+}
+
+.site-footer h2 {
+  margin: 0 0 20px;
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.footer-heading-line {
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-bottom: 20px;
+  background: #000;
+}
+
+.site-footer address { font-style: normal; }
+
+.contact-row,
+.footer-column nav a {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 15px;
+}
+
+.contact-row svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  fill: #000;
+}
+
+.contact-address { align-items: flex-start; }
+.contact-address svg { margin-top: 2px; }
+
+.footer-column nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.site-footer a { transition: color 180ms ease; }
+.site-footer a:hover,
+.site-footer a:focus-visible { color: #000; }
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.footer-socials a,
+.footer-socials svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.footer-socials svg { fill: #000; }
+
+.footer-bottom {
+  width: min(74%, 1424px);
+  margin-inline: auto;
+  padding: 20px 10px 30px;
+  border-top: 1px solid #d8d8d8;
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+}
 
 .section-reveal { opacity: 0; transform: translateY(18px); transition: opacity 650ms ease, transform 650ms ease; }
 .section-reveal.is-visible { opacity: 1; transform: none; }
@@ -355,6 +441,7 @@ button { font: inherit; }
   .main-nav > a:not(.contact-button)::after { display: none; }
   .contact-button { margin-top: 8px; text-align: center; }
   .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-inner { width: 82%; }
 }
 
 @media (max-width: 760px) {
@@ -398,7 +485,8 @@ button { font: inherit; }
   .product-card:last-child { width: calc(50% - 6px); grid-column: 1 / -1; justify-self: center; }
   .why-grid { grid-template-columns: 1fr; gap: 16px; }
   .collections-heading { align-items: flex-start; flex-direction: column; margin-bottom: 30px; }
-  .footer-inner { grid-template-columns: 1fr; gap: 40px; padding-top: 56px; padding-bottom: 52px; }
+  .footer-inner { grid-template-columns: 1fr; width: 100%; gap: 44px; padding-top: 56px; padding-bottom: 52px; }
+  .footer-bottom { width: calc(100% - (2 * var(--page-pad))); }
 }
 
 @media (max-width: 460px) {
